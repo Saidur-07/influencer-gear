@@ -16,16 +16,19 @@ body {
 
 /* nav bar styles */
 
-
 nav {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 6vh;
+  min-height: 6vh;
   margin-top: 10vh;
+  margin-bottom: 10vh;
 }
 .logo {
   width: 50vw;
+}
+.logo i {
+  display: none;
 }
 .logo h1 a {
   text-decoration: none;
@@ -61,7 +64,7 @@ nav {
 /* header section starts here  */
 
 header {
-  height: 70vh;
+  min-height: 70vh;
   width: 100vw;
   display: flex;
   justify-content: space-around;
@@ -119,14 +122,15 @@ header {
 
 .companies {
   width: 100vw;
-  height: 14vh;
+  min-height: 14vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 7vh;
 }
 .company {
   width: 70vw;
-  height: 10vh;
+  min-height: 10vh;
   border-top: 2px solid rgb(210, 210, 210);
   border-bottom: 2px solid rgb(210, 210, 210);
   border-top-left-radius: 15px;
@@ -163,7 +167,7 @@ header {
 .product {
   margin-right: 30px;
   margin-bottom: 30px;
-  height: 500px;
+  min-height: 500px;
   padding: 5%;
   cursor: pointer;
   background: #ffffff;
@@ -192,7 +196,7 @@ header {
 }
 
 .product img {
-  width: 300px;
+  max-width: 300px;
   height: 256px;
 }
 .product:hover {
@@ -205,9 +209,9 @@ header {
   color: #e02c6d;
   font-size: 1.2em;
   margin-left: 50%;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
 }
-.products a:hover{
+.products a:hover {
   color: orange;
   text-decoration: underline;
 }
@@ -216,9 +220,9 @@ header {
 
 /* about section starts here  */
 
-.about{
+.about {
   width: 100vw;
-  height: 70vh;
+  min-height: 70vh;
   margin: 10vh 0;
   display: flex;
   justify-content: space-around;
@@ -271,30 +275,276 @@ header {
 
 /* footer starts here   */
 
-footer{
- background-color: #112;
- width: 100vw;
- height: 20vh;
- color: white;
- display: flex;
- justify-content: center;
- align-items: center;
- flex-direction: column;
- margin-bottom: 0;
+footer {
+  background-color: #112;
+  width: 100vw;
+  min-height: 20vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 0;
 }
-footer .links a{
+footer .links a {
   color: white;
   text-decoration: none;
   margin-left: 1vw;
   font-size: 20px;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 }
-.links a:hover{
+.links a:hover {
   color: orange;
 }
 
-/* ---------------
+/* ----------
+Mobile and Tablet version 
+-------- */
 
-Mission Completed!
+@media only screen and (max-width: 688px) {
+  
+  nav {
+    margin-top: 5vh;
+  }
+  .logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+  }
+  .logo h1 a {
+    font-size: 24px;
+    margin: auto;
+    float: right;
+  }
 
---------------- */
+  .logo i {
+    display: block;
+    font-size: 24px;
+    color: black;
+  }
+  .menu {
+    display: none;
+  }
+  header {
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+  .right_side {
+    width: 100vw;
+    margin-bottom: 5vh;
+  }
+  .right_side img {
+    width: 250px;
+    height: 250px;
+    background-size: 220px;
+    margin: auto;
+  }
+  .left_side{
+    width: 100vw;
+    text-align: center;
+  }
+  .left_side h1 {
+    font-size: 2em;
+  }
+  .left_side a{
+    margin: auto;
+  }
+  .company{
+    width: 100vw;
+    /* border: none; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 20px;
+    place-items: center;
+  }
+  .products{
+    margin: 10px 0;
+  }
+  .products a{
+    margin: auto;
+  }
+  .collection{
+    grid-template-columns: repeat(1, 1fr);
+  width: 100vw;
+  }
+  .product{
+   margin: 10px auto;
+  }
+  .about{
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+  }
+  .about_text, .about_image{
+    width: 100vw;
+  }
+  .about_text{
+    margin-bottom: 100px;
+  }
+  .about_text a{
+    margin: auto;
+  }
+  .about_text h1{
+    font-size: 2.5em;
+  }
+  .about_image{
+    background-image: none;
+  }
+  .about_image img{
+    width: 90vw;
+
+  }
+ footer{
+   width: 100vw;
+ }
+  footer h1, footer p{
+    font-size: 1em;
+  }
+  
+}
+
+@media only screen and (max-width: 968px) and (min-width:688px){
+ 
+  nav {
+    margin-top: 5vh;
+  }
+  .logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+  }
+  .logo h1 a {
+    font-size: 28px;
+    margin: auto;
+    float: right;
+  }
+
+  .logo i {
+    display: block;
+    font-size: 28px;
+    color: black;
+  }
+  .menu {
+    display: none;
+  }
+  header {
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+  .right_side {
+    width: 100vw;
+    margin-bottom: 5vh;
+  }
+  .right_side img {
+    width: 250px;
+    height: 250px;
+    background-size: 220px;
+    margin: auto;
+  }
+  .left_side{
+    width: 100vw;
+    text-align: center;
+  }
+  .left_side h1 {
+    font-size: 2em;
+  }
+  .left_side a{
+    margin: auto;
+  }
+  .company{
+    width: 100vw;
+    /* border: none; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 30px;
+    place-items: center;
+  }
+  .products{
+    margin: 10px 0;
+  }
+  .products a{
+    margin: 3vh auto;
+  }
+  .collection{
+    grid-template-columns: repeat(2, 1fr);
+  width: 100vw;
+  }
+  .product{
+   margin: 10px auto;
+  }
+  .about{
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+  }
+  .about_text, .about_image{
+    width: 100vw;
+  }
+  .about_text{
+    margin-bottom: 100px;
+  }
+  .about_text a{
+    margin: auto;
+  }
+  .about_text h1{
+    font-size: 2.5em;
+  }
+  .about_image{
+    background-image: none;
+  }
+  .about_image img{
+    width: 90vw;
+
+  }
+ footer{
+   width: 100vw;
+ }
+  footer h1, footer p{
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 1440px) and (min-width:968px){
+ 
+ 
+  nav .logo h1 a{
+    font-size: 1.3em;
+  }
+  .menu ul{
+    margin-left: 0%;
+  }
+  .menu ul li a{
+    font-size: 1.2em;
+  }
+  .left_side h1 {
+    font-size: 3em;
+  }
+  .products{
+    margin: 10px 0;
+  }
+  .products a{
+    margin: 3vh auto;
+  }
+  .collection{
+    grid-template-columns: repeat(3, 1fr);
+  width: 100vw;
+  }
+  .product{
+   margin: 10px auto;
+  }
+  .about_text h1{
+    font-size: 2em;
+  }
+  .about_image{
+    background-image: none;
+  }
+  .about_image img{
+    width: 90%;
+
+  }
+}
