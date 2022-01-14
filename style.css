@@ -118,3 +118,29 @@ header{
 
 /* header ends here  */
 
+/* companies section starts here  */
+
+.companies{
+    width: 100vw;
+    height: 14vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.company{
+    width: 70vw;
+    height: 10vh;
+    border-top: 2px solid rgb(210, 210, 210);
+    border-bottom: 2px solid rgb(210, 210, 210);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* company section ends here  */
+
+/* product section starts here  */
