@@ -354,7 +354,7 @@ Mobile and Tablet version
   }
   .company{
     width: 100vw;
-    /* border: none; */
+    border: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 20px;
@@ -392,10 +392,11 @@ Mobile and Tablet version
   }
   .about_image{
     background-image: none;
+    width: 100vw;
   }
   .about_image img{
     width: 90vw;
-
+    margin-left: 0;
   }
  footer{
    width: 100vw;
@@ -459,7 +460,7 @@ Mobile and Tablet version
   }
   .company{
     width: 100vw;
-    /* border: none; */
+    border: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 30px;
