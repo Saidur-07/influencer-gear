@@ -16,16 +16,13 @@ body {
 
 /* nav bar styles */
 
-.navbar {
-  width: 100%;
-  height: 6vh;
-  margin-top: 10vh;
-}
 
 nav {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
+  width: 100%;
+  height: 6vh;
+  margin-top: 10vh;
 }
 .logo {
   width: 50vw;
@@ -214,3 +211,90 @@ header {
   color: orange;
   text-decoration: underline;
 }
+
+/* products section ends here  */
+
+/* about section starts here  */
+
+.about{
+  width: 100vw;
+  height: 70vh;
+  margin: 10vh 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about_text {
+  width: 50vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 8%;
+  padding-right: 6%;
+}
+.about_text h1 {
+  font-size: 3.5em;
+  font-weight: bold;
+}
+.about_text p {
+  font-weight: 600;
+}
+.about_text a {
+  text-decoration: none;
+  color: white;
+  background-color: #e02c6d;
+  padding: 10px;
+  width: 150px;
+  border-radius: 50px;
+  font-size: 1.2em;
+  transition: all 0.2s linear;
+}
+.about_text a:hover {
+  border-radius: 5px;
+}
+
+.about_image {
+  height: 100%;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-image: url(images/dots.png);
+  background-repeat: no-repeat;
+  background-size: 230px;
+  background-position: -50px 0;
+}
+
+/* about section ends here  */
+
+/* footer starts here   */
+
+footer{
+ background-color: #112;
+ width: 100vw;
+ height: 20vh;
+ color: white;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ margin-bottom: 0;
+}
+footer .links a{
+  color: white;
+  text-decoration: none;
+  margin-left: 1vw;
+  font-size: 20px;
+  transition: all .3s linear;
+}
+.links a:hover{
+  color: orange;
+}
+
+/* ---------------
+
+Mission Completed!
+
+--------------- */
