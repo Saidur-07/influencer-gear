@@ -1,5 +1,64 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* fonts  */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* Common styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+body {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* nav bar styles */
+
+.navbar {
+  width: 100%;
+  height: 6vh;
+  margin-top: 10vh;
+}
+
+nav {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.logo {
+  width: 50vw;
+}
+.logo h1 a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5em;
+  margin-left: 20%;
+}
+.menu {
+  width: 50vw;
+}
+.menu ul {
+  display: flex;
+  margin-left: 20%;
+}
+.menu ul li {
+  margin-left: 2em;
+  list-style-type: none;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5em;
+  transition: color 0.3s linear;
+}
+
+.menu ul li a:hover {
+  color: orange;
+}
+
+/* nav bar section ends here  */
+
+/* header section starts here  */
