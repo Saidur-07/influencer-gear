@@ -63,84 +63,154 @@ nav {
 
 /* header section starts here  */
 
-header{
-    height: 70vh;
-    width: 100vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+header {
+  height: 70vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.left_side{
-    width: 50vw;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-left: 8%;
-    padding-right: 6%;
+.left_side {
+  width: 50vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 8%;
+  padding-right: 6%;
 }
-.left_side h1{
-    font-size: 3.5em;
-    font-weight: bold;
+.left_side h1 {
+  font-size: 3.5em;
+  font-weight: bold;
 }
-.left_side p{
-    font-weight: 600;
+.left_side p {
+  font-weight: 600;
 }
-.left_side a{
-    text-decoration: none;
-    color: white;
-    background-color: #E02C6D;
-    padding: 10px;
-    width: 150px;
-    border-radius: 50px;
-    font-size: 1.2em;
-    transition: all .2s linear;
+.left_side a {
+  text-decoration: none;
+  color: white;
+  background-color: #e02c6d;
+  padding: 10px;
+  width: 150px;
+  border-radius: 50px;
+  font-size: 1.2em;
+  transition: all 0.2s linear;
 }
-.left_side a:hover{
-    border-radius: 5px;
+.left_side a:hover {
+  border-radius: 5px;
 }
 
-.right_side{
-    height: 100%;
-    width: 50vw;
-    display: flex;
-    align-items: center;
+.right_side {
+  height: 100%;
+  width: 50vw;
+  display: flex;
+  align-items: center;
 }
-.right_side img{
-    width: 440px;
-    height: 440px;
-    background-image: url(images/Circle\ design.svg);
-    background-position: 0 0px;
-    background-repeat: no-repeat;
-    background-size: 400px;
-    margin-left: 20%;
+.right_side img {
+  width: 440px;
+  height: 440px;
+  background-image: url(images/Circle\ design.svg);
+  background-position: 0 0px;
+  background-repeat: no-repeat;
+  background-size: 400px;
+  margin-left: 20%;
 }
 
 /* header ends here  */
 
 /* companies section starts here  */
 
-.companies{
-    width: 100vw;
-    height: 14vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.companies {
+  width: 100vw;
+  height: 14vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.company{
-    width: 70vw;
-    height: 10vh;
-    border-top: 2px solid rgb(210, 210, 210);
-    border-bottom: 2px solid rgb(210, 210, 210);
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.company {
+  width: 70vw;
+  height: 10vh;
+  border-top: 2px solid rgb(210, 210, 210);
+  border-bottom: 2px solid rgb(210, 210, 210);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /* company section ends here  */
 
 /* product section starts here  */
+
+.products {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.products_title {
+  font-size: 28px;
+  text-align: center;
+  margin: 5vh 0;
+}
+.collection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 60vw;
+}
+.product {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  height: 500px;
+  padding: 5%;
+  cursor: pointer;
+  background: #ffffff;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  transition: all 0.2s linear;
+}
+.product h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.product .cost {
+  font-size: 24px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.product .rating {
+  color: orange;
+}
+.rating span {
+  color: black;
+}
+.product .detail {
+  margin-top: 5px;
+}
+
+.product img {
+  width: 300px;
+  height: 256px;
+}
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 1px -1px 20px 0px rgb(82 71 71 / 48%);
+}
+.products a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #e02c6d;
+  font-size: 1.2em;
+  margin-left: 50%;
+  transition: all .2s linear;
+}
+.products a:hover{
+  color: orange;
+  text-decoration: underline;
+}
