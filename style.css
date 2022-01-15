@@ -21,8 +21,11 @@ nav {
   align-items: center;
   width: 100%;
   min-height: 6vh;
-  margin-top: 10vh;
+  margin-top: 8vh;
   margin-bottom: 10vh;
+}
+nav a {
+  text-decoration: none;
 }
 .logo {
   width: 50vw;
@@ -52,7 +55,7 @@ nav {
   text-decoration: none;
   color: black;
   font-size: 1.5em;
-  transition: color 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .menu ul li a:hover {
@@ -64,20 +67,37 @@ nav {
 /* header section starts here  */
 
 header {
-  min-height: 70vh;
+  min-height: 60vh;
   width: 100vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 .left_side {
+  animation: left_ani 1s 0.1s 1 forwards;
   width: 50vw;
   height: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding-left: 8%;
-  padding-right: 6%;
+}
+@keyframes left_ani {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: 5vw;
+    padding-left: 8%;
+    padding-right: 6%;
+  }
+}
+@keyframes right_ani {
+  from {
+    margin-right: 0;
+  }
+  to {
+    margin-right: 10%;
+  }
 }
 .left_side h1 {
   font-size: 3.5em;
@@ -98,6 +118,7 @@ header {
 }
 .left_side a:hover {
   border-radius: 5px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
 }
 
 .right_side {
@@ -105,6 +126,7 @@ header {
   width: 50vw;
   display: flex;
   align-items: center;
+  animation: right_ani 1s 0.1s 1 forwards;
 }
 .right_side img {
   width: 440px;
@@ -126,7 +148,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 7vh;
 }
 .company {
   width: 70vw;
@@ -210,6 +231,7 @@ header {
   font-size: 1.2em;
   margin-left: 50%;
   transition: all 0.2s linear;
+  margin-top: 3vh;
 }
 .products a:hover {
   color: orange;
@@ -223,7 +245,6 @@ header {
 .about {
   width: 100vw;
   min-height: 70vh;
-  margin: 10vh 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -261,14 +282,14 @@ header {
 
 .about_image {
   height: 100%;
-  width: 50vw;
+  width: 40vw;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background-image: url(images/dots.png);
-  background-repeat: no-repeat;
-  background-size: 230px;
-  background-position: -50px 0;
+}
+.about_image img {
+  width: 30vw;
+  height: 30vh;
 }
 
 /* about section ends here  */
@@ -278,7 +299,7 @@ header {
 footer {
   background-color: #112;
   width: 100vw;
-  min-height: 20vh;
+  min-height: 25vh;
   color: white;
   display: flex;
   justify-content: center;
@@ -290,8 +311,9 @@ footer .links a {
   color: white;
   text-decoration: none;
   margin-left: 1vw;
-  font-size: 20px;
+  font-size: 25px;
   transition: all 0.3s linear;
+  background-color: #111;
 }
 .links a:hover {
   color: orange;
@@ -302,7 +324,6 @@ Mobile and Tablet version
 -------- */
 
 @media only screen and (max-width: 688px) {
-  
   nav {
     margin-top: 5vh;
   }
@@ -335,6 +356,15 @@ Mobile and Tablet version
   .right_side {
     width: 100vw;
     margin-bottom: 5vh;
+    animation: top_ani 1s 0.1s 1 forwards;
+  }
+  @keyframes top_ani {
+    from {
+      margin-top: -10vh;
+    }
+    to {
+      margin-top: 1vh;
+    }
   }
   .right_side img {
     width: 250px;
@@ -342,17 +372,27 @@ Mobile and Tablet version
     background-size: 220px;
     margin: auto;
   }
-  .left_side{
+  .left_side {
     width: 100vw;
     text-align: center;
+    animation: bottom_ani 1s 0.1s 1 forwards;
+  }
+  @keyframes bottom_ani {
+    from {
+      margin-bottom: -10vh;
+    }
+    to {
+      margin-bottom: 1vh;
+    }
   }
   .left_side h1 {
     font-size: 2em;
   }
-  .left_side a{
+  .left_side a {
     margin: auto;
+    margin-bottom: 50px;
   }
-  .company{
+  .company {
     width: 100vw;
     border: none;
     display: grid;
@@ -360,55 +400,58 @@ Mobile and Tablet version
     grid-row-gap: 20px;
     place-items: center;
   }
-  .products{
-    margin: 10px 0;
+  .products {
+    margin: 50px 0;
   }
-  .products a{
+  .products a {
     margin: auto;
+    margin-top: 30px;
   }
-  .collection{
+  .collection {
     grid-template-columns: repeat(1, 1fr);
-  width: 100vw;
+    width: 100vw;
   }
-  .product{
-   margin: 10px auto;
+  .product {
+    margin: 10px auto;
   }
-  .about{
+  .about {
     flex-direction: column-reverse;
     justify-content: center;
     text-align: center;
   }
-  .about_text, .about_image{
+  .about_text,
+  .about_image {
     width: 100vw;
   }
-  .about_text{
-    margin-bottom: 100px;
+  .about_text {
+    margin-bottom: 30px;
   }
-  .about_text a{
+  .about_text a {
     margin: auto;
   }
-  .about_text h1{
+  .about_text h1 {
     font-size: 2.5em;
   }
-  .about_image{
+  .about_image {
     background-image: none;
     width: 100vw;
+    justify-content: center;
   }
-  .about_image img{
+  .about_image img {
     width: 90vw;
-    margin-left: 0;
+    margin-bottom: 30px;
   }
- footer{
-   width: 100vw;
- }
-  footer h1, footer p{
-    font-size: 1em;
+  footer {
+    width: 100vw;
+    height: 40vh;
   }
-  
+  footer h1,
+  footer p {
+    font-size: 1.2em;
+  }
 }
 
-@media only screen and (max-width: 968px) and (min-width:688px){
- 
+@media only screen and (max-width: 1018px) and (min-width: 688px) {
   nav {
     margin-top: 5vh;
   }
@@ -429,6 +472,9 @@ Mobile and Tablet version
     font-size: 28px;
     color: black;
   }
+  .logo a {
+    text-decoration: none;
+  }
   .menu {
     display: none;
   }
@@ -441,111 +487,122 @@ Mobile and Tablet version
   .right_side {
     width: 100vw;
     margin-bottom: 5vh;
+    animation: none;
+  }
+  .left_side {
+    animation: none;
+    padding: 20px;
   }
   .right_side img {
-    width: 250px;
-    height: 250px;
+    width: 280px;
+    height: 280px;
     background-size: 220px;
     margin: auto;
   }
-  .left_side{
+  .left_side {
     width: 100vw;
     text-align: center;
   }
   .left_side h1 {
     font-size: 2em;
   }
-  .left_side a{
+  .left_side a {
     margin: auto;
   }
-  .company{
+  .company {
     width: 100vw;
-    border: none;
+    /* border: none; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 30px;
     place-items: center;
   }
-  .products{
+  .products {
     margin: 10px 0;
   }
-  .products a{
+  .products a {
     margin: 3vh auto;
   }
-  .collection{
+  .collection {
     grid-template-columns: repeat(2, 1fr);
-  width: 100vw;
+    width: 100vw;
   }
-  .product{
-   margin: 10px auto;
+  .product {
+    margin: 10px auto;
   }
-  .about{
+  .about {
     flex-direction: column-reverse;
     justify-content: center;
     text-align: center;
   }
-  .about_text, .about_image{
+  .about_text,
+  .about_image {
     width: 100vw;
   }
-  .about_text{
-    margin-bottom: 100px;
+  .about_text {
+    margin-bottom: 20px;
   }
-  .about_text a{
+  .about_text a {
     margin: auto;
   }
-  .about_text h1{
+  .about_text h1 {
     font-size: 2.5em;
   }
-  .about_image{
-    background-image: none;
-  }
-  .about_image img{
-    width: 90vw;
 
+  .about_image {
+    justify-content: center;
   }
- footer{
-   width: 100vw;
- }
-  footer h1, footer p{
-    font-size: 1em;
+  .about_image img {
+    width: 60vw;
+    height: 40vh;
+  }
+  footer {
+    width: 100vw;
+    height: 35vh;
+  }
+  footer h1,
+  footer p {
+    font-size: 1.2em;
+    line-height: 30px;
   }
 }
-@media only screen and (max-width: 1440px) and (min-width:968px){
- 
- 
-  nav .logo h1 a{
+@media only screen and (max-width: 1440px) and (min-width: 1018px) {
+  nav .logo h1 a {
     font-size: 1.3em;
+    margin-left: 15%;
   }
-  .menu ul{
+  .menu ul {
     margin-left: 0%;
   }
-  .menu ul li a{
+  .menu ul li a {
     font-size: 1.2em;
   }
-  .left_side h1 {
-    font-size: 3em;
+  .companies {
+    margin-top: 5vh;
   }
-  .products{
+  .left_side h1 {
+    font-size: 2.2em;
+  }
+  .products {
     margin: 10px 0;
   }
-  .products a{
+  .products a {
     margin: 3vh auto;
   }
-  .collection{
+  .collection {
     grid-template-columns: repeat(3, 1fr);
-  width: 100vw;
+    width: 100vw;
   }
-  .product{
-   margin: 10px auto;
+  .product {
+    margin: 10px auto;
   }
-  .about_text h1{
+  .about_text h1 {
     font-size: 2em;
   }
-  .about_image{
+  .about_image {
     background-image: none;
   }
-  .about_image img{
-    width: 90%;
-
+  footer {
+    height: 30vh;
   }
 }
