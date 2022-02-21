@@ -1,5 +1,5 @@
 
-# Influences Gear website (Assignment 2 : 60)
+# Influencer's Gear website (Assignment 2 : 60)
 
 
 [https://programmer-saidur.github.io/influencer-gear/](https://programmer-saidur.github.io/influencer-gear/)
